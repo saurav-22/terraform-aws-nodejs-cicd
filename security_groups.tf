@@ -22,7 +22,7 @@ resource "aws_security_group" "bastion" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
-
+# Create private SG
 resource "aws_security_group" "private" {
   name = "private_sg"
   vpc_id = aws_vpc.vpc.id
@@ -43,7 +43,7 @@ resource "aws_security_group" "private" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
-
+# Create public SG
 resource "aws_security_group" "public" {
   name = "public_sg"
   vpc_id = aws_vpc.vpc.id
