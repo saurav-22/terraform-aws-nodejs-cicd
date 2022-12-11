@@ -1,8 +1,10 @@
+# Key pair
 resource "aws_key_pair" "tf_key" {
  key_name = "project-key"
   public_key = file("/home/ec2-user/.ssh/id_rsa.pub")
 }
 
+#Create Bastion host
 resource "aws_instance" "bastion" {
     tags = { 
     Name = "Bastion"
@@ -16,6 +18,7 @@ resource "aws_instance" "bastion" {
   availability_zone = "ap-south-1a"
 }
 
+#Create Jenkins host
 resource "aws_instance" "jenkins" {
     tags = {
     Name = "Jenkins"
@@ -28,6 +31,7 @@ resource "aws_instance" "jenkins" {
   availability_zone = "ap-south-1a"
 }
 
+#Create App host
 resource "aws_instance" "app" {
     tags = {
     Name = "App"
