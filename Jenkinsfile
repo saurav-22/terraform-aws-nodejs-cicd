@@ -1,7 +1,7 @@
 pipeline{
     agent any
     parameters {
-        string(name: "branch", defaultValue: "main")
+        text(name: "branch", defaultValue: "main")
     }
     environment {
         AWS_DEFAULT_REGION="ap-south-1"
