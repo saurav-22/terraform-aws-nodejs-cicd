@@ -26,6 +26,7 @@ pipeline{
                             try  {
 			                docker.withRegistry("public.ecr.aws/y2j8x9n3/saurav-node-app") {
     				            sh '''
+					        aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/y2j8x9n3
                     				docker build -t saurav-node-app .
                     				docker tag saurav-node-app:latest public.ecr.aws/y2j8x9n3/saurav-node-app:latest
                     				docker push public.ecr.aws/y2j8x9n3/saurav-node-app:latest
