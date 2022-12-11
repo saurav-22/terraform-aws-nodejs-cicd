@@ -26,9 +26,9 @@ pipeline{
                             try  {
 			                docker.withRegistry("public.ecr.aws/y2j8x9n3/saurav-node-app") {
     				            sh '''
-                    				sudo docker build -t saurav-node-app .
-                    				sudo docker tag saurav-node-app:latest public.ecr.aws/y2j8x9n3/saurav-node-app:latest
-                    				sudo docker push public.ecr.aws/y2j8x9n3/saurav-node-app:latest
+                    				docker build -t saurav-node-app .
+                    				docker tag saurav-node-app:latest public.ecr.aws/y2j8x9n3/saurav-node-app:latest
+                    				docker push public.ecr.aws/y2j8x9n3/saurav-node-app:latest
     				            '''
 			                    }
 				            }  catch (Exception err) {
