@@ -26,7 +26,6 @@ pipeline{
                             try  {
 			                docker.withRegistry("public.ecr.aws/y2j8x9n3/saurav-node-app") {
     				            sh '''
-                    				cd ${branch}
                     				docker build -t saurav-node-app .
                     				docker tag saurav-node-app:latest public.ecr.aws/y2j8x9n3/saurav-node-app:latest
                     				docker push public.ecr.aws/y2j8x9n3/saurav-node-app:latest
