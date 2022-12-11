@@ -53,7 +53,7 @@ pipeline{
                                     docker run -p 8080:8080 saurav-node-app:latest
     				            '''
 			                    }
-				            }  catch (Exception err) {
+				              catch (Exception err) {
 						    echo "Build is failed"
 					    	echo err
 						    script { BUILDFAIL = 'TRUE' 
@@ -63,4 +63,5 @@ pipeline{
                     }
                 }
         }
+}
 }
