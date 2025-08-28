@@ -39,3 +39,6 @@ A VPC setup on AWS which includes public & private subnets (multi-AZ). Public su
 + Now type **sudo nano /etc/ansible/hosts**.
 + Add IP addresses of Jenkins and App hosts in hosts file.
 + Now type **ansible-playbook docker_install.yaml**
+
+---
+### To be completed
