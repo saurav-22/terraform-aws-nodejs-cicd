@@ -1,8 +1,10 @@
-# Saurav upGrad Assignment
+# Objective
 
 The code base will help the user to plan & bootstrap infrastructure on AWS along with basic CI/CD. The motive of this code base is to have a Dockerized Node js app (monolith) running securely. It is also manageable, easy to configure and secure design for his infrastructure & CI/CD.
+
 ### The following deliverables have been identified:
 A VPC setup on AWS which includes public & private subnets (multi-AZ). Public subnets should be used for only exposing required services. This VPC should be managed via Terraform.
+
 #### Following instances will be needed:
 + **Jenkins** - For CI purpose.
 + **App** - For running the containerized version of the app.
@@ -17,6 +19,7 @@ A VPC setup on AWS which includes public & private subnets (multi-AZ). Public su
     - Now run **terraform init** command
     - Run **terraform plan**
     - Run **terraform apply**
+    - 
 #### The above commands will perform the following tasks:
 1. Initialize a bucket in s3 for the backend state store using Terraform. This bucket will be used later in this project to use the state files of Terraform.
 2. **Create the following:** 
