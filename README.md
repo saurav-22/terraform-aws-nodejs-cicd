@@ -1,6 +1,6 @@
 # Objective
 
-The code base will help the user to plan & bootstrap infrastructure on AWS along with basic CI/CD. The motive of this code base is to have a Dockerized Node js app (monolith) running securely. It is also manageable, easy to configure and secure design for his infrastructure & CI/CD.
+The code base will help the user to plan & bootstrap infrastructure on AWS along with basic CI/CD. The motive of this code base is to have a Dockerized Node js app (monolith) running securely. It is also manageable, easy to configure and secure design for infrastructure & CI/CD.
 
 ### The following deliverables have been identified:
 A VPC setup on AWS which includes public & private subnets (multi-AZ). Public subnets should be used for only exposing required services. This VPC should be managed via Terraform.
